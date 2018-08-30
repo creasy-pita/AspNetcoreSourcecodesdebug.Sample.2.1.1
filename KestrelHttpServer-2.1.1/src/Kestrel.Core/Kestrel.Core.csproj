@@ -4,7 +4,7 @@
     <AssemblyName>Microsoft.AspNetCore.Server.Kestrel.Core</AssemblyName>
     <RootNamespace>Microsoft.AspNetCore.Server.Kestrel.Core</RootNamespace>
     <Description>Core components of ASP.NET Core Kestrel cross-platform web server.</Description>
-    <TargetFrameworks>netstandard2.0;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageTags>aspnetcore;kestrel</PackageTags>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Hosting-2.1.1\src\Microsoft.AspNetCore.Hosting.Server.Abstractions\Microsoft.AspNetCore.Hosting.Server.Abstractions.csproj" />
     <ProjectReference Include="..\Kestrel.Transport.Abstractions\Kestrel.Transport.Abstractions.csproj" />
   </ItemGroup>
 

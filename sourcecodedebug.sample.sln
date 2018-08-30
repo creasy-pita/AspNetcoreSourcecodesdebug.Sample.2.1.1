@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStart1_WebStart", "QuickStart1_WebStart\QuickStart1_WebStart.csproj", "{D91BF0A0-E9A9-4934-895F-33EEBD721018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickStart1_WebStart", "QuickStart1_WebStart\QuickStart1_WebStart.csproj", "{D91BF0A0-E9A9-4934-895F-33EEBD721018}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Config", "Configuration-2.1.1\src\Config\Config.csproj", "{72554429-C6D6-4A87-9886-2C25C5C879CE}"
 EndProject
@@ -42,6 +42,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Http.Abstractions", "HttpAbstractions-2.1.1\src\Microsoft.AspNetCore.Http.Abstractions\Microsoft.AspNetCore.Http.Abstractions.csproj", "{DAFFC0BE-2AC8-451D-B44D-86B0653E6C05}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Config.FileExtensions", "Configuration-2.1.1\src\Config.FileExtensions\Config.FileExtensions.csproj", "{73DA01A6-77F5-4565-8534-E81EFA89FA50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kestrel.Core", "KestrelHttpServer-2.1.1\src\Kestrel.Core\Kestrel.Core.csproj", "{1EE989C2-72D3-40F6-B603-FBF1BA46FDBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kestrel.Transport.Abstractions", "KestrelHttpServer-2.1.1\src\Kestrel.Transport.Abstractions\Kestrel.Transport.Abstractions.csproj", "{7214E7B2-9ADB-4F95-8227-EC3E6F6D0EEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connections.Abstractions", "KestrelHttpServer-2.1.1\src\Connections.Abstractions\Connections.Abstractions.csproj", "{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +135,18 @@ Global
 		{73DA01A6-77F5-4565-8534-E81EFA89FA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73DA01A6-77F5-4565-8534-E81EFA89FA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73DA01A6-77F5-4565-8534-E81EFA89FA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE989C2-72D3-40F6-B603-FBF1BA46FDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE989C2-72D3-40F6-B603-FBF1BA46FDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE989C2-72D3-40F6-B603-FBF1BA46FDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE989C2-72D3-40F6-B603-FBF1BA46FDBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7214E7B2-9ADB-4F95-8227-EC3E6F6D0EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7214E7B2-9ADB-4F95-8227-EC3E6F6D0EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7214E7B2-9ADB-4F95-8227-EC3E6F6D0EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7214E7B2-9ADB-4F95-8227-EC3E6F6D0EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

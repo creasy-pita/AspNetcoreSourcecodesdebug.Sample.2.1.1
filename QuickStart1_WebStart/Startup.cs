@@ -36,5 +36,24 @@ namespace QuickStart1_WebStart
 
             app.UseMvc();
         }
+
+        public Func<int, string> Build()
+        {
+            Action<int> a = i => i = i + 1;
+            return new Func<int, string>(
+                i => { return "1"; }
+            );
+        }
+
+        public Func<int, string> Build1()
+        {
+            Action<int> a = i => i = i + 1;
+            return Method;
+        }
+
+        public string Method(int i)
+        {
+            return i.ToString();
+        }
     }
 }
