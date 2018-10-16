@@ -33,8 +33,9 @@ namespace QuickStart1_WebStart
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseMvc();
+                
         }
 
         public Func<int, string> Build()

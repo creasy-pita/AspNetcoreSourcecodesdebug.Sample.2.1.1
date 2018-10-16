@@ -49,6 +49,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kestrel.Transport.Abstracti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connections.Abstractions", "KestrelHttpServer-2.1.1\src\Connections.Abstractions\Connections.Abstractions.csproj", "{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Routing.Abstractions", "Routing-2.1.1\src\Microsoft.AspNetCore.Routing.Abstractions\Microsoft.AspNetCore.Routing.Abstractions.csproj", "{1FA53272-1DC8-4144-9C68-743114E03786}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Routing", "Routing-2.1.1\src\Microsoft.AspNetCore.Routing\Microsoft.AspNetCore.Routing.csproj", "{31381A75-25C5-4317-B84B-BD88B9D1BA37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,14 @@ Global
 		{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FF57AE-FE64-47B5-8BC3-6D2B9EA11587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA53272-1DC8-4144-9C68-743114E03786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA53272-1DC8-4144-9C68-743114E03786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA53272-1DC8-4144-9C68-743114E03786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA53272-1DC8-4144-9C68-743114E03786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31381A75-25C5-4317-B84B-BD88B9D1BA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31381A75-25C5-4317-B84B-BD88B9D1BA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31381A75-25C5-4317-B84B-BD88B9D1BA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31381A75-25C5-4317-B84B-BD88B9D1BA37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

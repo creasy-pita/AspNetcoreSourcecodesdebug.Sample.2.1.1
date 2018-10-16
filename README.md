@@ -1,5 +1,8 @@
 # AspNetcoreSourcecodesdebug.Sample.2.1.1
 
+
+
+aspnetcore simple webapi  aspnetcore sourcecode  debug  with aspnetcore2.1.1 api
 	startup 类中 Configure 可以实现 多个输入参数的注入 IServiceProvider、ILoggerFactory、ILogger、IApplicationLifetime
             var configureMethod = FindConfigureDelegate(startupType, environmentName);
 
