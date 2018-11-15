@@ -3,25 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using QuickStart1_WebStart.Models;
 
 namespace QuickStart1_WebStart.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private MyOptions _option;
-
-        public ValuesController(IOptionsMonitor<MyOptions> options)
-        {
-            _option = options.CurrentValue;
-        }
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2",$"MyOptions.Option1{_option.Option1}" };
+            return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

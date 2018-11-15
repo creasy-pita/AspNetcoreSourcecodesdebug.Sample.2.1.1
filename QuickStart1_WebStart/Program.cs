@@ -20,12 +20,6 @@ namespace QuickStart1_WebStart
         public static IWebHost BuildWebHost(string[] args)
         {
             IWebHostBuilder builder = WebHost.CreateDefaultBuilder(args);
-            builder.ConfigureAppConfiguration( (context,configurationBinder)=>
-                {
-                    configurationBinder.AddJsonFile("appsettings.json", false, true);
-                }
-                
-                );
             builder = builder.UseStartup<Startup>();
 
             return builder.Build();

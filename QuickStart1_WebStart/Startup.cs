@@ -8,8 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using QuickStart1_WebStart.Controllers;
-using QuickStart1_WebStart.Models;
 
 namespace QuickStart1_WebStart
 {
@@ -26,9 +24,6 @@ namespace QuickStart1_WebStart
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.Configure<MyOptions>(Configuration.GetSection("MyOptions"));
-            //ValuesController c = new ValuesController();
-            //if (c.GetType() == typeof(ValuesController)) { }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +33,9 @@ namespace QuickStart1_WebStart
             {
                 app.UseDeveloperExceptionPage();
             }
+            
             app.UseMvc();
+                
         }
 
         public Func<int, string> Build()

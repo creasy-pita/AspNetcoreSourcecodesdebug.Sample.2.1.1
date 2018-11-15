@@ -279,7 +279,7 @@ namespace Microsoft.Extensions.Configuration
 
             return null;
         }
-        //Bookmark : binder a instance from Configuration 
+
         private static object BindInstance(Type type, object instance, IConfiguration config, BinderOptions options)
         {
             // if binding IConfigurationSection, break early
