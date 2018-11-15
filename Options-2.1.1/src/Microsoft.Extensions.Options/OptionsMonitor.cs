@@ -27,7 +27,7 @@ namespace Microsoft.Extensions.Options
         public OptionsMonitor(IOptionsFactory<TOptions> factory, IEnumerable<IOptionsChangeTokenSource<TOptions>> sources, IOptionsMonitorCache<TOptions> cache)
         {
             _factory = factory;
-            _sources = sources;
+            _sources = sources;//通过IOptionsChangeTokenSource实现事件的监听
             _cache = cache;
 
             foreach (var source in _sources)
