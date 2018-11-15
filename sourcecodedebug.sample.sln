@@ -53,6 +53,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Routin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Routing", "Routing-2.1.1\src\Microsoft.AspNetCore.Routing\Microsoft.AspNetCore.Routing.csproj", "{31381A75-25C5-4317-B84B-BD88B9D1BA37}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.Abstractions", "FileSystem-2.1.1\src\FS.Abstractions\FS.Abstractions.csproj", "{C53FAC54-24FB-4DD5-92C6-19743A9FD0A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.Physical", "FileSystem-2.1.1\src\FS.Physical\FS.Physical.csproj", "{222420C1-D455-4F56-BAF3-5080036E389F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.Globbing", "FileSystem-2.1.1\src\FS.Globbing\FS.Globbing.csproj", "{6391D376-BED9-43BA-BCE8-6225F4AD3920}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +165,18 @@ Global
 		{31381A75-25C5-4317-B84B-BD88B9D1BA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31381A75-25C5-4317-B84B-BD88B9D1BA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31381A75-25C5-4317-B84B-BD88B9D1BA37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C53FAC54-24FB-4DD5-92C6-19743A9FD0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53FAC54-24FB-4DD5-92C6-19743A9FD0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53FAC54-24FB-4DD5-92C6-19743A9FD0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53FAC54-24FB-4DD5-92C6-19743A9FD0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{222420C1-D455-4F56-BAF3-5080036E389F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{222420C1-D455-4F56-BAF3-5080036E389F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{222420C1-D455-4F56-BAF3-5080036E389F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{222420C1-D455-4F56-BAF3-5080036E389F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6391D376-BED9-43BA-BCE8-6225F4AD3920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6391D376-BED9-43BA-BCE8-6225F4AD3920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6391D376-BED9-43BA-BCE8-6225F4AD3920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6391D376-BED9-43BA-BCE8-6225F4AD3920}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

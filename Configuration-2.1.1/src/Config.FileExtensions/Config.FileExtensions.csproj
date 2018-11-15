@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common-2.1.1\src\Microsoft.Extensions.Primitives\Microsoft.Extensions.Primitives.csproj" />
+    <ProjectReference Include="..\..\..\FileSystem-2.1.1\src\FS.Abstractions\FS.Abstractions.csproj" />
     <ProjectReference Include="..\Config\Config.csproj" />
   </ItemGroup>
 

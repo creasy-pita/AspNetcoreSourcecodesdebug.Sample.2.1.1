@@ -37,3 +37,23 @@ aspnetcore simple webapi  aspnetcore sourcecode  debug  with aspnetcore2.1.1 api
 
 ##Startup 类的调试
 webhostbuidler Method 中显示内容
+
+
+##FileProvider的 detect file change 的源码查看
+###1    配置 时 设置reloadonchange=true
+         builder.ConfigureAppConfiguration( (context,configurationBinder)=>
+                {
+                    configurationBinder.AddJsonFile("appsettings.json", false, true);
+                }
+                
+                );
+###2 trace AddJsonFile 方法 发现 FileConfigurationProvider的 构造方法 public FileConfigurationProvider(FileConfigurationSource source) 中使用到了  IFileProvider 接口 的Watch方法，即实时监听文件是否修改
+
+###3 进一步trace 需要知道 IFileProvider 属于哪个项目， 并下载其源码
+在github  中search 框输入： "public interface IFileProvider" in:file org:aspnet
+
+###4 下载对应项目，并引入相关的项目 FS.Physical、FS.Abstractions 到解决方案中
+（注意 因为FS.Physical 还引用了 项目FS.Globbing，所以同时把这个项目引入
+Config.FileExtensions  引用了FS.Abstractions，需要在Config.FileExtensions引入 FS.Abstractions ）
+
+###5 进行代码调试

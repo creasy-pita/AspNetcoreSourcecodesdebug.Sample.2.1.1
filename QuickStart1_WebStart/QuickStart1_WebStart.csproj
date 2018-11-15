@@ -17,7 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Configuration-2.1.1\src\Config.Json\Config.Json.csproj" />
     <ProjectReference Include="..\DependencyInjection-2.1.1\src\DI.Abstractions\DI.Abstractions.csproj" />
+    <ProjectReference Include="..\FileSystem-2.1.1\src\FS.Abstractions\FS.Abstractions.csproj" />
+    <ProjectReference Include="..\FileSystem-2.1.1\src\FS.Physical\FS.Physical.csproj" />
     <ProjectReference Include="..\Hosting-2.1.1\src\Microsoft.AspNetCore.Hosting\Microsoft.AspNetCore.Hosting.csproj" />
     <ProjectReference Include="..\MetaPackages-2.1.1\src\Microsoft.AspNetCore\Microsoft.AspNetCore.csproj" />
     <ProjectReference Include="..\Options-2.1.1\src\Microsoft.Extensions.Options.ConfigurationExtensions\Microsoft.Extensions.Options.ConfigurationExtensions.csproj" />
