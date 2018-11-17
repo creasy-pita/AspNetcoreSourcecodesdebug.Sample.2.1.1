@@ -167,6 +167,7 @@ namespace Microsoft.Extensions.FileProviders.Physical
             if (!_wildcardTokenLookup.TryGetValue(pattern, out tokenInfo))
             {
                 var cancellationTokenSource = new CancellationTokenSource();
+                //Bookmark use system.threading.CanellationToken
                 var cancellationChangeToken = new CancellationChangeToken(cancellationTokenSource.Token);
                 var matcher = new Matcher(StringComparison.OrdinalIgnoreCase);
                 matcher.AddInclude(pattern);

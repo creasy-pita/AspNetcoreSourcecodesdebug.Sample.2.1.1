@@ -30,7 +30,7 @@ namespace Microsoft.Extensions.Configuration
             if (Source.ReloadOnChange && Source.FileProvider != null)
             {
                 ChangeToken.OnChange(
-                    () => Source.FileProvider.Watch(Source.Path),
+                    () => Source.FileProvider.Watch(Source.Path),//Bookmarks crucial code on detect configuration file changes  
                     () => {
                         Thread.Sleep(Source.ReloadDelay);
                         Load(reload: true);

@@ -27,11 +27,11 @@ namespace Microsoft.Extensions.Options
         public OptionsMonitor(IOptionsFactory<TOptions> factory, IEnumerable<IOptionsChangeTokenSource<TOptions>> sources, IOptionsMonitorCache<TOptions> cache)
         {
             _factory = factory;
-            _sources = sources;//通过IOptionsChangeTokenSource实现事件的监听
+            _sources = sources;//bookmark 通过IOptionsChangeTokenSource实现事件的监听
             _cache = cache;
 
             foreach (var source in _sources)
-            {
+            {//bookmark changeTokenproducer 获取文件变更的触发，  changeTokenconsumer 传入具体的函数式来消费这个触发
                 ChangeToken.OnChange<string>(
                     () => source.GetChangeToken(),
                     (name) => InvokeChanged(name),

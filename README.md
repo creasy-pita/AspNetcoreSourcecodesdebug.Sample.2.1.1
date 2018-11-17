@@ -57,3 +57,61 @@ webhostbuidler Method 中显示内容
 Config.FileExtensions  引用了FS.Abstractions，需要在Config.FileExtensions引入 FS.Abstractions ）
 
 ###5 进行代码调试
+
+1 OptionsMonitor  constructor
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="factory">The factory to use to create options.</param>
+        /// <param name="sources">The sources used to listen for changes to the options instance.</param>
+        /// <param name="cache">The cache used to store options.</param>
+        public OptionsMonitor(IOptionsFactory<TOptions> factory, IEnumerable<IOptionsChangeTokenSource<TOptions>> sources, IOptionsMonitorCache<TOptions> cache)
+        {
+            _factory = factory;
+            _sources = sources;
+            _cache = cache;
+
+            foreach (var source in _sources)
+            {传入具体的函数式来消费这个触发
+                ChangeToken.OnChange<string>(
+                    () => source.GetChangeToken(),
+                    (name) => InvokeChanged(name),
+                    source.Name);
+            }
+        }
+
+
+##how fileprovider  detect the file changes
+		
+I wonder to know why the ConfigureFile can reload when the related file changed, And I trace from the under code :
+
+to this code:
+
+
+Q 问题1  下载 System.Threading.CancellationTokenSource  | CancellationToken 的代码
+Q 问题2  I mean who detect the file and how to detect the file whether or not to be changed,and other details;
+相关资料： https://docs.microsoft.com/en-us/aspnet/core/fundamentals/change-tokens?view=aspnetcore-2.1#example-uses-of-change-tokens-in-aspnet-core
+
+I mean who detect the file and how to detect the file whether or not to be changed,and other details;
+
+
+change tokens works when related file is changed; 
+1 FileConfigurationProvider constructor
+         public FileConfigurationProvider(FileConfigurationSource source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+            Source = source;
+
+            if (Source.ReloadOnChange && Source.FileProvider != null)
+            {
+                ChangeToken.OnChange(
+                    () => Source.FileProvider.Watch(Source.Path),//
+                    () => {
+                        Thread.Sleep(Source.ReloadDelay);
+                        Load(reload: true);
+                    });
+            }
+        }
